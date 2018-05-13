@@ -1,0 +1,54 @@
+<div class="ui-card-wrap">
+  <div class="row">
+    <div class="col-lg-4 col-sm-6">
+      <div class="card">
+        <div class="card-main">
+          <div class="card-header">
+            <div class="card-header-side pull-left">
+              <div class="avatar">
+                <img alt="IMDB" src="http://www.iconarchive.com/download/i75865/martz90/circle/imdb.ico">
+              </div>
+            </div>
+            <div class="card-inner">
+              <span class="card-heading">#{movie["Title"]}</span>
+            </div>
+          </div>
+          <div class="card-img">
+            <img alt="alt text" src="#{movie["Poster"]}" style="width: 100%;">
+            <p class="card-img-heading">#{movie["Title"]}</p>
+          </div>
+          <div class="card-inner">
+            <p>
+              Decripcion: #{}<br>
+              Fecha: #{movie["Year"]}<br>
+              Genero: <br>
+              Actores: <br>
+            </p>
+          </div>
+          <div class="card-action">
+            <div class="card-action-btn pull-left">
+              <a class="btn btn-flat waves-attach" href=""><span class="icon">check</span>&nbsp;Button</a>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-sm-6">
+<pre class="margin-top-no ui-card-pre ui-card-pre-media">
+&lt;div class="card"&gt;
+&lt;div class="card-main"&gt;
+&lt;div class="card-header"&gt;
+    ...
+    &lt;div class="card-inner"&gt; ... &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="card-img"&gt;
+    ...
+    &lt;p class="card-img-heading"&gt; ... &lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="card-inner"&gt; ... &lt;/div&gt;
+&lt;div class="card-action"&gt; ... &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+    </div>
+  </div>
+</div>

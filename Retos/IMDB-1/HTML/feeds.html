@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>IMDB SEARCH</title>
+	<link href="./css/base.min.css" rel="stylesheet">
+	<link href="./css/project.min.css" rel="stylesheet">
+</head>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#ui_menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix" href="index.html">IMDB SEARCH</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">Data Tables</span>
+	</header>
+	<nav aria-hidden="true" class="menu" id="ui_menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content">
+				<a class="menu-logo" href="index.html">IMDB SEARCH - Simon Bermudez</a>
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" data-toggle="collapse" href="#ui_menu_components">Components</a>
+						<ul class="menu-collapse collapse in" id="ui_menu_components">
+							<li>
+								<a class="waves-attach" href="ui-button.html">Buttons</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="ui-button-fab.html">Buttons<small class="margin-left-xs">(Floating Action Button)</small></a>
+							</li>
+							<li>
+								<a class="waves-attach" href="ui-card.html">Cards</a>
+							</li>
+							<li class="active">
+								<a class="waves-attach" href="ui-data-table.html">Data Tables</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="ui-dialog.html">Dialogs</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="ui-dropdown-menu.html">Menus</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="ui-nav-drawer.html">Navigation Drawers</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="ui-picker.html">Pickers</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="ui-progress.html">Progress</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="ui-selection-control.html">Selection Controls</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="ui-snackbar.html">Snackbars</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="ui-stepper.html">Steppers</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="ui-tab.html">Tabs</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="ui-text-field.html">Text Fields</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="ui-toolbar.html">Toolbars</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#ui_menu_extras">Extras</a>
+						<ul class="menu-collapse collapse" id="ui_menu_extras">
+							<li>
+								<a class="waves-attach" href="ui-avatar.html">Avatars</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="ui-icon.html">Icons</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="ui-label.html">Labels</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="ui-nav.html">Navs</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="ui-tile.html">Tiles</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#ui_menu_javascript">Javascript</a>
+						<ul class="menu-collapse collapse" id="ui_menu_javascript">
+							<li>
+								<a class="waves-attach" href="ui-affix.html">Affix</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="ui-collapse.html">Collapse</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="ui-dropdown-menu.html">Dropdown</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="ui-modal.html">Modals</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="ui-tab.html">Togglable Tabs</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="collapsed waves-attach" data-toggle="collapse" href="#ui_menu_samples">Sample Pages</a>
+						<ul class="menu-collapse collapse" id="ui_menu_samples">
+							<li>
+								<a class="waves-attach" href="page-login.html">Login Page</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="page-picker.html">Picker Page</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2">
+						<h1 class="content-heading">Resultados de la busqueda</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2">
+					<section class="content-inner margin-top-no">
+						<div class="card">
+							<div class="card-main">
+							</div>
+						</div>
+						<h2 class="content-sub-heading">Movie Info</h2>
+<div class="ui-card-wrap">
+  <div class="row">
+    <div class="col-lg-4 col-sm-6">
+      <div class="card">
+        <div class="card-main">
+          <div class="card-header">
+            <div class="card-header-side pull-left">
+              <div class="avatar">
+                <img alt="IMDB" src="http://www.iconarchive.com/download/i75865/martz90/circle/imdb.ico">
+              </div>
+            </div>
+            <div class="card-inner">
+              <span class="card-heading">Batman Begins</span>
+            </div>
+          </div>
+          <div class="card-img">
+            <img alt="alt text" src="http://ia.media-imdb.com/images/M/MV5BNTM3OTc0MzM2OV5BMl5BanBnXkFtZTYwNzUwMTI3._V1_SX300.jpg" style="width: 100%;">
+            <p class="card-img-heading">Batman Begins</p>
+          </div>
+          <div class="card-inner">
+            <p>
+              <b>Fecha:</b> 2005<br>
+              <b>Decripcion:</b> After training with his mentor, Batman begins his fight to free crime-ridden Gotham City from the corruption that Scarecrow and the League of Shadows have cast upon it.<br>
+              <b>Genero:</b> Action, Adventure<br>
+              <b>Actores:</b> Christian Bale, Michael Caine, Liam Neeson, Katie Holmes<br>
+            </p>
+          </div>
+          <div class="card-action">
+            <div class="card-action-btn pull-left">
+              <a class="btn btn-flat waves-attach" href="http://www.imdb.com/"><span class="go">check</span>&nbsp;Ir a IMDB</a>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div class="col-lg-4 col-sm-6">
+      <div class="card">
+        <div class="card-main">
+          <div class="card-header">
+            <div class="card-header-side pull-left">
+              <div class="avatar">
+                <img alt="IMDB" src="http://www.iconarchive.com/download/i75865/martz90/circle/imdb.ico">
+              </div>
+            </div>
+            <div class="card-inner">
+              <span class="card-heading">Batman v Superman: Dawn of Justice</span>
+            </div>
+          </div>
+          <div class="card-img">
+            <img alt="alt text" src="http://ia.media-imdb.com/images/M/MV5BYThjYzcyYzItNTVjNy00NDk0LTgwMWQtYjMwNmNlNWJhMzMyXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg" style="width: 100%;">
+            <p class="card-img-heading">Batman v Superman: Dawn of Justice</p>
+          </div>
+          <div class="card-inner">
+            <p>
+              <b>Fecha:</b> 2016<br>
+              <b>Decripcion:</b> Fearing that the actions of Superman are left unchecked, Batman takes on the Man of Steel, while the world wrestles with what kind of a hero it really needs.<br>
+              <b>Genero:</b> Action, Adventure, Sci-Fi<br>
+              <b>Actores:</b> Ben Affleck, Henry Cavill, Amy Adams, Jesse Eisenberg<br>
+            </p>
+          </div>
+          <div class="card-action">
+            <div class="card-action-btn pull-left">
+              <a class="btn btn-flat waves-attach" href="http://www.imdb.com/"><span class="go">check</span>&nbsp;Ir a IMDB</a>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div class="col-lg-4 col-sm-6">
+      <div class="card">
+        <div class="card-main">
+          <div class="card-header">
+            <div class="card-header-side pull-left">
+              <div class="avatar">
+                <img alt="IMDB" src="http://www.iconarchive.com/download/i75865/martz90/circle/imdb.ico">
+              </div>
+            </div>
+            <div class="card-inner">
+              <span class="card-heading">Batman</span>
+            </div>
+          </div>
+          <div class="card-img">
+            <img alt="alt text" src="http://ia.media-imdb.com/images/M/MV5BMTYwNjAyODIyMF5BMl5BanBnXkFtZTYwNDMwMDk2._V1_SX300.jpg" style="width: 100%;">
+            <p class="card-img-heading">Batman</p>
+          </div>
+          <div class="card-inner">
+            <p>
+              <b>Fecha:</b> 1989<br>
+              <b>Decripcion:</b> The Dark Knight of Gotham City begins his war on crime with his first major enemy being the clownishly homicidal Joker.<br>
+              <b>Genero:</b> Action, Adventure<br>
+              <b>Actores:</b> Michael Keaton, Jack Nicholson, Kim Basinger, Robert Wuhl<br>
+            </p>
+          </div>
+          <div class="card-action">
+            <div class="card-action-btn pull-left">
+              <a class="btn btn-flat waves-attach" href="http://www.imdb.com/"><span class="go">check</span>&nbsp;Ir a IMDB</a>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div class="col-lg-4 col-sm-6">
+      <div class="card">
+        <div class="card-main">
+          <div class="card-header">
+            <div class="card-header-side pull-left">
+              <div class="avatar">
+                <img alt="IMDB" src="http://www.iconarchive.com/download/i75865/martz90/circle/imdb.ico">
+              </div>
+            </div>
+            <div class="card-inner">
+              <span class="card-heading">Batman Returns</span>
+            </div>
+          </div>
+          <div class="card-img">
+            <img alt="alt text" src="http://ia.media-imdb.com/images/M/MV5BODM2OTc0Njg2OF5BMl5BanBnXkFtZTgwMDA4NjQxMTE@._V1_SX300.jpg" style="width: 100%;">
+            <p class="card-img-heading">Batman Returns</p>
+          </div>
+          <div class="card-inner">
+            <p>
+              <b>Fecha:</b> 1992<br>
+              <b>Decripcion:</b> When a corrupt businessman and the grotesque Penguin plot to take control of Gotham City, only Batman can stop them, while the Catwoman has her own agenda.<br>
+              <b>Genero:</b> Action<br>
+              <b>Actores:</b> Michael Keaton, Danny DeVito, Michelle Pfeiffer, Christopher Walken<br>
+            </p>
+          </div>
+          <div class="card-action">
+            <div class="card-action-btn pull-left">
+              <a class="btn btn-flat waves-attach" href="http://www.imdb.com/"><span class="go">check</span>&nbsp;Ir a IMDB</a>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div class="col-lg-4 col-sm-6">
+      <div class="card">
+        <div class="card-main">
+          <div class="card-header">
+            <div class="card-header-side pull-left">
+              <div class="avatar">
+                <img alt="IMDB" src="http://www.iconarchive.com/download/i75865/martz90/circle/imdb.ico">
+              </div>
+            </div>
+            <div class="card-inner">
+              <span class="card-heading">Batman & Robin</span>
+            </div>
+          </div>
+          <div class="card-img">
+            <img alt="alt text" src="http://ia.media-imdb.com/images/M/MV5BMGQ5YTM1NmMtYmIxYy00N2VmLWJhZTYtN2EwYTY3MWFhOTczXkEyXkFqcGdeQXVyNTA2NTI0MTY@._V1_SX300.jpg" style="width: 100%;">
+            <p class="card-img-heading">Batman & Robin</p>
+          </div>
+          <div class="card-inner">
+            <p>
+              <b>Fecha:</b> 1997<br>
+              <b>Decripcion:</b> The Dark Knight of Gotham City begins his war on crime with his first major enemy being the clownishly homicidal Joker.<br>
+              <b>Genero:</b> Action, Adventure<br>
+              <b>Actores:</b> Michael Keaton, Jack Nicholson, Kim Basinger, Robert Wuhl<br>
+            </p>
+          </div>
+          <div class="card-action">
+            <div class="card-action-btn pull-left">
+              <a class="btn btn-flat waves-attach" href="http://www.imdb.com/"><span class="go">check</span>&nbsp;Ir a IMDB</a>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div class="col-lg-4 col-sm-6">
+      <div class="card">
+        <div class="card-main">
+          <div class="card-header">
+            <div class="card-header-side pull-left">
+              <div class="avatar">
+                <img alt="IMDB" src="http://www.iconarchive.com/download/i75865/martz90/circle/imdb.ico">
+              </div>
+            </div>
+            <div class="card-inner">
+              <span class="card-heading">Batman Forever</span>
+            </div>
+          </div>
+          <div class="card-img">
+            <img alt="alt text" src="http://ia.media-imdb.com/images/M/MV5BNWY3M2I0YzItNzA1ZS00MzE3LThlYTEtMTg2YjNiOTYzODQ1XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg" style="width: 100%;">
+            <p class="card-img-heading">Batman Forever</p>
+          </div>
+          <div class="card-inner">
+            <p>
+              <b>Fecha:</b> 1995<br>
+              <b>Decripcion:</b> Batman must battle Two-Face and The Riddler with help from an amorous psychologist and a young circus acrobat who becomes his sidekick, Robin.<br>
+              <b>Genero:</b> Action, Adventure, Fantasy<br>
+              <b>Actores:</b> Val Kilmer, Tommy Lee Jones, Jim Carrey, Nicole Kidman<br>
+            </p>
+          </div>
+          <div class="card-action">
+            <div class="card-action-btn pull-left">
+              <a class="btn btn-flat waves-attach" href="http://www.imdb.com/"><span class="go">check</span>&nbsp;Ir a IMDB</a>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div class="col-lg-4 col-sm-6">
+      <div class="card">
+        <div class="card-main">
+          <div class="card-header">
+            <div class="card-header-side pull-left">
+              <div class="avatar">
+                <img alt="IMDB" src="http://www.iconarchive.com/download/i75865/martz90/circle/imdb.ico">
+              </div>
+            </div>
+            <div class="card-inner">
+              <span class="card-heading">Batman: The Animated Series</span>
+            </div>
+          </div>
+          <div class="card-img">
+            <img alt="alt text" src="http://ia.media-imdb.com/images/M/MV5BMTU3MjcwNzY3NF5BMl5BanBnXkFtZTYwNzA2MTI5._V1_SX300.jpg" style="width: 100%;">
+            <p class="card-img-heading">Batman: The Animated Series</p>
+          </div>
+          <div class="card-inner">
+            <p>
+              <b>Fecha:</b> 1992–1995<br>
+              <b>Decripcion:</b> The Dark Knight battles crime in Gotham City with occasional help from Robin and Batgirl.<br>
+              <b>Genero:</b> Animation, Action, Adventure<br>
+              <b>Actores:</b> Kevin Conroy, Efrem Zimbalist Jr., Bob Hastings<br>
+            </p>
+          </div>
+          <div class="card-action">
+            <div class="card-action-btn pull-left">
+              <a class="btn btn-flat waves-attach" href="http://www.imdb.com/"><span class="go">check</span>&nbsp;Ir a IMDB</a>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div class="col-lg-4 col-sm-6">
+      <div class="card">
+        <div class="card-main">
+          <div class="card-header">
+            <div class="card-header-side pull-left">
+              <div class="avatar">
+                <img alt="IMDB" src="http://www.iconarchive.com/download/i75865/martz90/circle/imdb.ico">
+              </div>
+            </div>
+            <div class="card-inner">
+              <span class="card-heading">Batman: Under the Red Hood</span>
+            </div>
+          </div>
+          <div class="card-img">
+            <img alt="alt text" src="http://ia.media-imdb.com/images/M/MV5BMTMwNDEyMjExOF5BMl5BanBnXkFtZTcwMzU4MDU0Mw@@._V1_SX300.jpg" style="width: 100%;">
+            <p class="card-img-heading">Batman: Under the Red Hood</p>
+          </div>
+          <div class="card-inner">
+            <p>
+              <b>Fecha:</b> 2010<br>
+              <b>Decripcion:</b> There's a mystery afoot in Gotham City, and Batman must go toe-to-toe with a mysterious vigilante, who goes by the name of Red Hood. Subsequently, old wounds reopen and old, once buried memories come into the light.<br>
+              <b>Genero:</b> Animation, Action, Crime<br>
+              <b>Actores:</b> Bruce Greenwood, Jensen Ackles, John DiMaggio, Neil Patrick Harris<br>
+            </p>
+          </div>
+          <div class="card-action">
+            <div class="card-action-btn pull-left">
+              <a class="btn btn-flat waves-attach" href="http://www.imdb.com/"><span class="go">check</span>&nbsp;Ir a IMDB</a>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div class="col-lg-4 col-sm-6">
+      <div class="card">
+        <div class="card-main">
+          <div class="card-header">
+            <div class="card-header-side pull-left">
+              <div class="avatar">
+                <img alt="IMDB" src="http://www.iconarchive.com/download/i75865/martz90/circle/imdb.ico">
+              </div>
+            </div>
+            <div class="card-inner">
+              <span class="card-heading">Batman: The Dark Knight Returns, Part 1</span>
+            </div>
+          </div>
+          <div class="card-img">
+            <img alt="alt text" src="http://ia.media-imdb.com/images/M/MV5BMzIxMDkxNDM2M15BMl5BanBnXkFtZTcwMDA5ODY1OQ@@._V1_SX300.jpg" style="width: 100%;">
+            <p class="card-img-heading">Batman: The Dark Knight Returns, Part 1</p>
+          </div>
+          <div class="card-inner">
+            <p>
+              <b>Fecha:</b> 2012<br>
+              <b>Decripcion:</b> Batman has not been seen for ten years. A new breed of criminal ravages Gotham City, forcing 55-year-old Bruce Wayne back into the cape and cowl. But, does he still have what it takes to fight crime in a new era?<br>
+              <b>Genero:</b> Animation, Action, Adventure<br>
+              <b>Actores:</b> Peter Weller, Ariel Winter, David Selby, Wade Williams<br>
+            </p>
+          </div>
+          <div class="card-action">
+            <div class="card-action-btn pull-left">
+              <a class="btn btn-flat waves-attach" href="http://www.imdb.com/"><span class="go">check</span>&nbsp;Ir a IMDB</a>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div class="col-lg-4 col-sm-6">
+      <div class="card">
+        <div class="card-main">
+          <div class="card-header">
+            <div class="card-header-side pull-left">
+              <div class="avatar">
+                <img alt="IMDB" src="http://www.iconarchive.com/download/i75865/martz90/circle/imdb.ico">
+              </div>
+            </div>
+            <div class="card-inner">
+              <span class="card-heading">Batman: The Dark Knight Returns, Part 2</span>
+            </div>
+          </div>
+          <div class="card-img">
+            <img alt="alt text" src="http://ia.media-imdb.com/images/M/MV5BMTQ1Mjk1NTY2NV5BMl5BanBnXkFtZTgwMTA2MDEwNzE@._V1_SX300.jpg" style="width: 100%;">
+            <p class="card-img-heading">Batman: The Dark Knight Returns, Part 2</p>
+          </div>
+          <div class="card-inner">
+            <p>
+              <b>Fecha:</b> 2013<br>
+              <b>Decripcion:</b> The Batman has returned after a 10-year absence. The Gotham authorities want to arrest him. An old foe wants a reunion. The Feds want the Man of Tomorrow to put a stop to him.<br>
+              <b>Genero:</b> Animation, Action, Crime<br>
+              <b>Actores:</b> Peter Weller, Ariel Winter, Michael Emerson, David Selby<br>
+            </p>
+          </div>
+          <div class="card-action">
+            <div class="card-action-btn pull-left">
+              <a class="btn btn-flat waves-attach" href="http://www.imdb.com/"><span class="go">check</span>&nbsp;Ir a IMDB</a>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+								<div class="card-action">
+									<div class="card-action-btn pull-right">
+										<a class="btn btn-flat waves-attach" href="javascript:void(0)"><span class="icon">chevron_left</span></a>
+										<a class="btn btn-flat waves-attach" href="javascript:void(0)"><span class="icon">chevron_right</span></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer class="ui-footer">
+		<div class="container">
+			<p>IMDB SEARCH</p>
+		</div>
+	</footer>
+
+	<!-- js -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	<script src="./js/base.min.js"></script>
+	<script src="./js/project.min.js"></script>
+</body>
+</html>
